@@ -1,4 +1,6 @@
 # aplikasi-sistem-informasi
+Terbantu dengan kode buatanku? tag aku atau cantumkan sumber ya!
+
 Kode Program aplikasi sistem informasi berbasis website dengan menggunakan bahasa pemrograman Python si Object Oriented Programming dengan Flask si kerangka kerja yang membantu untuk aplikasi web yang menyediakan dasar-dasar untuk perutean URL!
 
 Didalam repo ini berisi :
