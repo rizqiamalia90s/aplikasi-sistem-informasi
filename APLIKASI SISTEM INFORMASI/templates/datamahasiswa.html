@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('dashboard') }}">Sistem Informasi Akademik</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Data Mahasiswa</h2>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Kembali ke Dashboard</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>NPM</th>
+                    <th>Nama</th>
+                    <th>Program Studi</th>
+                    <th>Tahun Ajaran</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mahasiswa in data_mahasiswa %}
+                <tr>
+                    <td>{{ mahasiswa.npm }}</td>
+                    <td>{{ mahasiswa.nama }}</td>
+                    <td>{{ mahasiswa.prodi }}</td>
+                    <td>{{ mahasiswa.tahun_ajaran }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
